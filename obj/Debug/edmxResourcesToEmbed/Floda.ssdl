@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PassWord" Type="nvarchar" MaxLength="150" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thumb" Type="nvarchar" MaxLength="255" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mobi" Type="nvarchar" MaxLength="20" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gender" Type="bit" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="AccountCategoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="AccountCategory">
+    <Key>
+      <PropertyRef Name="AccountCategoryID" />
+    </Key>
+    <Property Name="AccountCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thumb" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Position" Type="int" />
+  </EntityType>
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="ArticleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thumb" Type="nvarchar" MaxLength="255" />
+    <Property Name="Keyword" Type="nvarchar" MaxLength="255" />
+    <Property Name="ImageList" Type="nvarchar" MaxLength="255" />
+    <Property Name="ViewTime" Type="int" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Position" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ArticleCategoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="ArticleCategory">
+    <Key>
+      <PropertyRef Name="ArticleCategoryID" />
+    </Key>
+    <Property Name="ArticleCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thumb" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="ViewTime" Type="int" />
+    <Property Name="Position" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ArticleMainCategoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="ArticleMainCategory">
+    <Key>
+      <PropertyRef Name="ArticleMainCategoryID" />
+    </Key>
+    <Property Name="ArticleMainCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thumb" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="ViewTime" Type="int" />
+    <Property Name="Position" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thump" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mobi" Type="nvarchar" MaxLength="20" />
+    <Property Name="Gender" Type="bit" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="ApproveBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientCategoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="ClientCategory">
+    <Key>
+      <PropertyRef Name="ClientCategoryID" />
+    </Key>
+    <Property Name="ClientCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thumb" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Position" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mobi" Type="nvarchar" MaxLength="20" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactCategoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="ContactCategory">
+    <Key>
+      <PropertyRef Name="ContactCategoryID" />
+    </Key>
+    <Property Name="ContactCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thumb" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Position" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Price" Type="float" />
+  </EntityType>
+  <EntityType Name="Orderer">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Total" Type="float" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="255" />
+    <Property Name="PaymentMethod" Type="int" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="4000" />
+    <Property Name="OrderStatus" Type="bit" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="DeliverStatus" Type="bit" />
+    <Property Name="ChargeStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thumb" Type="nvarchar" MaxLength="255" />
+    <Property Name="Keyword" Type="nvarchar" MaxLength="255" />
+    <Property Name="ImageList" Type="nvarchar" MaxLength="255" />
+    <Property Name="ViewTime" Type="int" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Position" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="float" />
+    <Property Name="OldPrice" Type="float" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="ProductCategoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="ProductCategoryID" />
+    </Key>
+    <Property Name="ProductCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thumb" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Position" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductMainCategoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductMainCategory">
+    <Key>
+      <PropertyRef Name="ProductMainCategoryID" />
+    </Key>
+    <Property Name="ProductMainCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="Thumb" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Position" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Account_AccountCategory">
+    <End Role="AccountCategory" Type="Self.AccountCategory" Multiplicity="0..1" />
+    <End Role="Account" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountCategory">
+        <PropertyRef Name="AccountCategoryID" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="AccountCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Article_Account">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Article_ArticleCategory">
+    <End Role="ArticleCategory" Type="Self.ArticleCategory" Multiplicity="0..1" />
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ArticleCategory">
+        <PropertyRef Name="ArticleCategoryID" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="ArticleCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArticleCategory_Account">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="ArticleCategory" Type="Self.ArticleCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="ArticleCategory">
+        <PropertyRef Name="CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArticleCategory_ArticleMainCategory">
+    <End Role="ArticleMainCategory" Type="Self.ArticleMainCategory" Multiplicity="0..1" />
+    <End Role="ArticleCategory" Type="Self.ArticleCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ArticleMainCategory">
+        <PropertyRef Name="ArticleMainCategoryID" />
+      </Principal>
+      <Dependent Role="ArticleCategory">
+        <PropertyRef Name="ArticleMainCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArticleMainCategory_Account">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="ArticleMainCategory" Type="Self.ArticleMainCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="ArticleMainCategory">
+        <PropertyRef Name="CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_ClientCategory">
+    <End Role="ClientCategory" Type="Self.ClientCategory" Multiplicity="0..1" />
+    <End Role="Client" Type="Self.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientCategory">
+        <PropertyRef Name="ClientCategoryID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="ClientCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientCategory_Account">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="ClientCategory" Type="Self.ClientCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="ClientCategory">
+        <PropertyRef Name="CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contact_ContactCategory">
+    <End Role="ContactCategory" Type="Self.ContactCategory" Multiplicity="0..1" />
+    <End Role="Contact" Type="Self.Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContactCategory">
+        <PropertyRef Name="ContactCategoryID" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="ContactCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContactCategory_Account">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="ContactCategory" Type="Self.ContactCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="ContactCategory">
+        <PropertyRef Name="CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_Orderer">
+    <End Role="Orderer" Type="Self.Orderer" Multiplicity="1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orderer">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Account">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_ProductCategory">
+    <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="ProductCategoryID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductCategory_Account">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="ProductCategory">
+        <PropertyRef Name="CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductCategory_ProductMainCategory">
+    <End Role="ProductMainCategory" Type="Self.ProductMainCategory" Multiplicity="0..1" />
+    <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductMainCategory">
+        <PropertyRef Name="ProductMainCategoryID" />
+      </Principal>
+      <Dependent Role="ProductCategory">
+        <PropertyRef Name="ProductMainCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductMainCategory_Account">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="ProductMainCategory" Type="Self.ProductMainCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="ProductMainCategory">
+        <PropertyRef Name="CreateBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBModelStoreContainer">
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AccountCategory" EntityType="Self.AccountCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticleCategory" EntityType="Self.ArticleCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticleMainCategory" EntityType="Self.ArticleMainCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientCategory" EntityType="Self.ClientCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContactCategory" EntityType="Self.ContactCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orderer" EntityType="Self.Orderer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductMainCategory" EntityType="Self.ProductMainCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Account_AccountCategory" Association="Self.FK_Account_AccountCategory">
+      <End Role="AccountCategory" EntitySet="AccountCategory" />
+      <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Article_Account" Association="Self.FK_Article_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Article_ArticleCategory" Association="Self.FK_Article_ArticleCategory">
+      <End Role="ArticleCategory" EntitySet="ArticleCategory" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArticleCategory_Account" Association="Self.FK_ArticleCategory_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="ArticleCategory" EntitySet="ArticleCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArticleCategory_ArticleMainCategory" Association="Self.FK_ArticleCategory_ArticleMainCategory">
+      <End Role="ArticleMainCategory" EntitySet="ArticleMainCategory" />
+      <End Role="ArticleCategory" EntitySet="ArticleCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArticleMainCategory_Account" Association="Self.FK_ArticleMainCategory_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="ArticleMainCategory" EntitySet="ArticleMainCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_ClientCategory" Association="Self.FK_Client_ClientCategory">
+      <End Role="ClientCategory" EntitySet="ClientCategory" />
+      <End Role="Client" EntitySet="Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientCategory_Account" Association="Self.FK_ClientCategory_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="ClientCategory" EntitySet="ClientCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contact_ContactCategory" Association="Self.FK_Contact_ContactCategory">
+      <End Role="ContactCategory" EntitySet="ContactCategory" />
+      <End Role="Contact" EntitySet="Contact" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContactCategory_Account" Association="Self.FK_ContactCategory_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="ContactCategory" EntitySet="ContactCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Orderer" Association="Self.FK_OrderDetail_Orderer">
+      <End Role="Orderer" EntitySet="Orderer" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Product" Association="Self.FK_OrderDetail_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Account" Association="Self.FK_Product_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_ProductCategory" Association="Self.FK_Product_ProductCategory">
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductCategory_Account" Association="Self.FK_ProductCategory_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductCategory_ProductMainCategory" Association="Self.FK_ProductCategory_ProductMainCategory">
+      <End Role="ProductMainCategory" EntitySet="ProductMainCategory" />
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductMainCategory_Account" Association="Self.FK_ProductMainCategory_Account">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="ProductMainCategory" EntitySet="ProductMainCategory" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

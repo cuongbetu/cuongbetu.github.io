@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5736f15d90fb4aa0acb87445db5b42e4" Name="Diagram1">
+        <EntityTypeShape EntityType="DBModel.Account" Width="1.5" PointX="3" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.AccountCategory" Width="1.5" PointX="0.75" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Article" Width="1.5" PointX="5.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.ArticleCategory" Width="1.5" PointX="7.5" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.ArticleMainCategory" Width="1.5" PointX="5.25" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Client" Width="1.5" PointX="7.5" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.ClientCategory" Width="1.5" PointX="5.25" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Contact" Width="1.5" PointX="7.5" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.ContactCategory" Width="1.5" PointX="5.25" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.OrderDetail" Width="1.5" PointX="10.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Orderer" Width="1.5" PointX="8.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Product" Width="1.5" PointX="8.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.ProductCategory" Width="1.5" PointX="10.5" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.ProductMainCategory" Width="1.5" PointX="5.25" PointY="44.75" IsExpanded="true" />
+        <AssociationConnector Association="DBModel.FK_Account_AccountCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Article_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_ArticleCategory_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_ArticleMainCategory_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_ClientCategory_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_ContactCategory_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Product_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_ProductCategory_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_ProductMainCategory_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Article_ArticleCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_ArticleCategory_ArticleMainCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Client_ClientCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Contact_ContactCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_OrderDetail_Orderer" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_OrderDetail_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_Product_ProductCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_ProductCategory_ProductMainCategory" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

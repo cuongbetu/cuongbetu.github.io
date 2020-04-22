@@ -1,0 +1,9 @@
+D:\Shop Floda\FlodaStore\bin\FlodaStore.dll.config
+D:\Shop Floda\FlodaStore\bin\FlodaStore.dll
+D:\Shop Floda\FlodaStore\bin\FlodaStore.pdb
+D:\Shop Floda\FlodaStore\bin\EntityFramework.dll
+D:\Shop Floda\FlodaStore\bin\EntityFramework.xml
+D:\Shop Floda\FlodaStore\obj\Debug\FlodaStore.csprojAssemblyReference.cache
+D:\Shop Floda\FlodaStore\obj\Debug\FlodaStore.csproj.CopyComplete
+D:\Shop Floda\FlodaStore\obj\Debug\FlodaStore.dll
+D:\Shop Floda\FlodaStore\obj\Debug\FlodaStore.pdb
