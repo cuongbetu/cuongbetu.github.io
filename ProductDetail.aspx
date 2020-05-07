@@ -13,11 +13,11 @@
                         </div>
                         <div class="detail-product">
                             <div class="left-title">
-                                <a href="">Trang Chủ</a>
+                                <a href="Default.aspx">Trang Chủ</a>
                                 <span class="b">/</span>
-                                <a href="">Dịp Tặng Hoa</a>
+                                <a href="#">Dịp Tặng Hoa</a>
                                 <span class="b">/</span>
-                                <a href="">Hoa Tỏ Tình</a>
+                                <a href="#">Hoa Tỏ Tình</a>
                             </div>
                             <div class="title-product">
                                 <h2>
@@ -67,51 +67,26 @@
                     <h3>Mẫu Hoa Bán Chạy</h3>
                     <div class="line"></div>
                     <ul class="capability">
-                        <li>
-                            <a href="">
-                                <img src="Images/product/hinh-san-pham (22).jpg" alt="">
-                                <span>Tự Hào</span>
-                            </a>
-                            <div class="block-content">
-                                <div class="rating">
-                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                </div>
-                                <div class="price-wrapper">
-                                    <span class="price-detail-2">500,000&nbsp;</span>
-                                    <span class="currency-2">VNĐ</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="Images/product/hinh-san-pham (23).jpg" alt="">
-                                <span>Giản Đơn</span>
-                            </a>
-                            <div class="block-content">
-                                <div class="rating">
-                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                </div>
-                                <div class="price-wrapper">
-                                    <span class="price-detail-2">500,000&nbsp;</span>
-                                    <span class="currency-2">VNĐ</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="Images/product/hinh-san-pham (24).jpg" alt="">
-                                <span>Tin Yêu</span>
-                            </a>
-                            <div class="block-content">
-                                <div class="rating">
-                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                </div>
-                                <div class="price-wrapper">
-                                    <span class="price-detail-2">500,000&nbsp;</span>
-                                    <span class="currency-2">VNĐ</span>
-                                </div>
-                            </div>
-                        </li>
+                        <asp:Repeater ID="Repeater_BestSeller" runat="server">
+                            <ItemTemplate>
+                                <li>
+                                    <a href='<%# Eval("ProductID","/ProductDetail.aspx?id={0}") %>'>
+                                        <img src='<%# Eval("Avatar") %>' alt="">
+                                        <span><%# Eval("Title") %></span>
+                                    </a>
+                                    <div class="block-content">
+                                        <div class="rating">
+                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <span class="price-detail-2"><%# Eval("Price","{0:0,00}") %>&nbsp;</span>
+                                            <span class="currency-2">VNĐ</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                       
                     </ul>
                 </div>
 
@@ -132,7 +107,7 @@
                             <li>Miễn phí các phụ kiện tặng kèm (thiệp, băng rôn, bảng tên, thông điệp,…)</li>
                             <li>Chụp ảnh hoa thật trước khi giao để đảm bảo hài lòng khách hàng</li>
                             <li>Giao hoa tươi gấp trong vòng 2 giờ kể từ khi đặt hàng.</li>
-                            <li>Nhiều ưu đãi giảm giá cho khách hàng thành viên, đặt hoa thường xuyên tại Trạm Hoa</li>
+                            <li>Nhiều ưu đãi giảm giá cho khách hàng thành viên, đặt hoa thường xuyên tại Floda Store</li>
                         </ul>
                         <h3>Lưu Ý</h3>
                         <ul>
@@ -143,7 +118,7 @@
                     <div id="payment" data-tab-content class="tab-that payment">
                         <div class="span">
                             <span>
-                                <a href="">Trạm Hoa</a>
+                                <a href="">Floda Store</a>
                                 cung cấp cho quý khách nhiều phương thức thanh toán khác nhau để dễ dàng lựa chọn phương thức phù hợp nhất:</span>
                         </div>
                         <p>Đối với khách hàng trong nước:</p>
@@ -159,9 +134,9 @@
                                     Phường 12, Quận 5, TP.HCM
                                 </strong>
                             </li>
-                            <li>Chuyển tiền qua Paypal: Quý khách có thể thanh toán đơn hàng của mình thông qua tài khoản <strong>Paypal: tramhoavn@gmail.com</strong></li>
+                            <li>Chuyển tiền qua Paypal: Quý khách có thể thanh toán đơn hàng của mình thông qua tài khoản <strong>Paypal: flodastore@gmail.com</strong></li>
                         </ul>
-                        <p>Với phương thức thanh toán chuyển khoản (Ngân hàng / Ví điện tử / Paypal), quý khách vui lòng chụp màn hình giao dịch, gửi ảnh lại cho Trạm Hoa qua các kênh liên lạc hoặc thông qua email: tramhoavn@gmail.com</p>
+                        <p>Với phương thức thanh toán chuyển khoản (Ngân hàng / Ví điện tử / Paypal), quý khách vui lòng chụp màn hình giao dịch, gửi ảnh lại cho Floda Store qua các kênh liên lạc hoặc thông qua email: tramhoavn@gmail.com</p>
                         <h3>Ngân hàng hỗ trợ:</h3>
                         <div class="bank-detail">
                             <div class="bank">
@@ -190,7 +165,7 @@
                             <li>Miễn phí các phụ kiện tặng kèm (thiệp, băng rôn, bảng tên, thông điệp,…)</li>
                             <li>Chụp ảnh hoa thật trước khi giao để đảm bảo hài lòng khách hàng</li>
                             <li>Giao hoa tươi gấp trong vòng 2 giờ kể từ khi đặt hàng.</li>
-                            <li>Nhiều ưu đãi giảm giá cho khách hàng thành viên, đặt hoa thường xuyên tại Trạm Hoa</li>
+                            <li>Nhiều ưu đãi giảm giá cho khách hàng thành viên, đặt hoa thường xuyên tại Floda Store</li>
                         </ul>
                         <h3>Lưu Ý 3</h3>
                         <ul>
@@ -206,7 +181,7 @@
                             <li>Miễn phí các phụ kiện tặng kèm (thiệp, băng rôn, bảng tên, thông điệp,…)</li>
                             <li>Chụp ảnh hoa thật trước khi giao để đảm bảo hài lòng khách hàng</li>
                             <li>Giao hoa tươi gấp trong vòng 2 giờ kể từ khi đặt hàng.</li>
-                            <li>Nhiều ưu đãi giảm giá cho khách hàng thành viên, đặt hoa thường xuyên tại Trạm Hoa</li>
+                            <li>Nhiều ưu đãi giảm giá cho khách hàng thành viên, đặt hoa thường xuyên tại Floda Store</li>
                         </ul>
                         <h3>Lưu Ý 4</h3>
                         <ul>
@@ -224,113 +199,23 @@
                 </h1>
             </div>
             <div class="product-list">
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="./Images/product/hinh-san-pham (1).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="./Images/product/hinh-san-pham (2).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="./Images/product/hinh-san-pham (3).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="./Images/product/hinh-san-pham (4).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="./Images/product/hinh-san-pham (5).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="./Images/product/hinh-san-pham (6).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="./Images/product/hinh-san-pham (7).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="./Images/product/hinh-san-pham (8).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3>Have A Nice Day
-                        </h3>
-                        <div class="price">
-                            <span class="old-price">240.000 VNĐ
-                            </span>
-                            <span class="new-price">200.000 VNĐ
-                            </span>
+                <asp:Repeater ID="Repeater_ProductList" runat="server">
+                    <ItemTemplate>
+                        <div class="product-items">
+                            <a href='<%# Eval("ProductID","ProductDetail.aspx?id={0}")%>' class="image">
+                                <img runat="server" src='<%# Eval("Avatar") %>' alt="">
+                            </a>
+                            <div class="product-infor">
+                                <h3 class="title"><%# Eval("Title") %>
+                                </h3>
+                                <span class="old-price"><%# Eval("OldPrice","{0:0,00}") %> VNĐ
+                                </span>
+                                <span class="new-price"><%# Eval("Price","{0:0,00}") %> VNĐ
+                                </span>
+                            </div>
                         </div>
-
-                    </div>
-                </div>
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
         </div>
     </main>

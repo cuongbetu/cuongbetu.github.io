@@ -14,25 +14,66 @@ namespace FlodaStore
         {
             if (!IsPostBack)
             {
-                Load_Data();
+                string url = Request.QueryString.ToString();
+                if (url.Contains("id"))
+                {
+                    Load_Data();
+                    
+                }
+                else
+                {
+                    Response.Redirect("/");
+                }
+                
             }
         }
 
         public void Load_Data()
         {
-            int ID = int.Parse(Request.QueryString["id"]);
-            DBEntities db = new DBEntities();
-            var data = (from c in db.Products
-                        where c.Status == true && c.ProductID == ID
-                        select new
-                        {
-                            c.ProductID,
-                            c.Avatar,
-                            c.Title,
-                            c.Price
-                        });
-            Repeater_Detail.DataSource = data.Take(1).ToList();
-            Repeater_Detail.DataBind();
+            void Load_Detail(){
+                int ID = int.Parse(Request.QueryString["id"]);
+                DBEntities db = new DBEntities();
+                var data = db.Products.Where(x => x.ProductID == ID).Select(x => new
+                {
+                    x.Avatar,
+                    x.Price,
+                    x.Title
+                });
+                Repeater_Detail.DataSource = data.ToList();
+                Repeater_Detail.DataBind();
+            }
+            Load_Detail();
+
+            void Load_ProductList()
+            {
+                DBEntities db = new DBEntities();
+                var data = db.Products.Where(x => x.Status == true).Select(x => new
+                {
+                    x.ProductID,
+                    x.Avatar,
+                    x.Price,
+                    x.OldPrice,
+                    x.Title
+                });
+                Repeater_ProductList.DataSource = data.Take(8).ToList();
+                Repeater_ProductList.DataBind();
+            }
+            Load_ProductList();
+
+            void Load_BestSeller()
+            {
+                DBEntities db = new DBEntities();
+                var data = db.Products.Where(x => x.Status == true).OrderBy(x => x.Price).Select(x => new
+                {
+                    x.ProductID,
+                    x.Avatar,
+                    x.Title,
+                    x.Price
+                });
+                Repeater_BestSeller.DataSource = data.Take(4).ToList();
+                Repeater_BestSeller.DataBind();
+            }
+            Load_BestSeller();
         }
     }
 }

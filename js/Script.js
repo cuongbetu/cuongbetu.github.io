@@ -86,7 +86,13 @@
                 closeSidebar();
         }
     }
-    sideBar();
+sideBar();
+
+function getURL() {
+    var url = window.location.href;
+    console.log(url);
+}
+getURL();
        
 
 

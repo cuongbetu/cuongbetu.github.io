@@ -133,100 +133,7 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-                <%--<div class="product-items">
-                    <a href="#" class="image">
-                        <img src="../Images/product/hinh-san-pham (2).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="../Images/product/hinh-san-pham (3).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="../Images/product/hinh-san-pham (4).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="../Images/product/hinh-san-pham (5).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="../Images/product/hinh-san-pham (6).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="../Images/product/hinh-san-pham (7).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3 class="title">Have A Nice Day
-                        </h3>
-                        <span class="old-price">240.000 VNĐ
-                        </span>
-                        <span class="new-price">200.000 VNĐ
-                        </span>
-                    </div>
-                </div>
-                <div class="product-items">
-                    <a href="#" class="image">
-                        <img src="../Images/product/hinh-san-pham (8).jpg" alt="">
-                    </a>
-                    <div class="product-infor">
-                        <h3>Have A Nice Day
-                        </h3>
-                        <div class="price">
-                            <span class="old-price">240.000 VNĐ
-                            </span>
-                            <span class="new-price">200.000 VNĐ
-                            </span>
-                        </div>
-
-                    </div>
-                </div>--%>
+                
             </div>
             <div class="see-more-product">
                 <a href="/ProductList.aspx">
@@ -267,7 +174,7 @@
                                 </h3>
                                 <span class="old-price"><%# Eval("OldPrice","{0:0,00}") %> VNĐ
                                 </span>
-                                <span class="new-price"><%# Eval("OldPrice","{0:0,00}") %> VNĐ
+                                <span class="new-price"><%# Eval("Price","{0:0,00}") %> VNĐ
                                 </span>
                             </div>
                         </div>

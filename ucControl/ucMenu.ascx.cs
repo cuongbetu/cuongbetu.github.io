@@ -14,6 +14,8 @@ namespace FlodaStore.ucControl
             if (!IsPostBack)
             {
                 Load_Data();
+                string keyword = Request.QueryString["keyword"];
+                input_Search.Value = keyword;
             }
         }
 
@@ -40,7 +42,17 @@ namespace FlodaStore.ucControl
 
         protected void LinkButton_Search_Click(object sender, EventArgs e)
         {
-
+            string keyword = input_Search.Value.Trim();
+            if (keyword != string.Empty)
+            {
+                string url = "/ProductList.aspx?keyword={0}";
+                string getUrl = string.Format(url, keyword);
+                Response.Redirect(getUrl);
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

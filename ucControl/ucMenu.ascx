@@ -36,12 +36,12 @@
             <ItemTemplate>
                 <div class="dropdown">
                     <div class="menu-item">
-                        <%# Eval("Title") %> <i class="fa fa-angle-down"></i>
+                        <a href="ProductList.aspx"><%# Eval("Title")%> <i class="fa fa-angle-down"></i></a>
                     </div>
                     <div class="dropdown-content">
                         <asp:Repeater ID="Repeater_Sub" DataSource='<%#Eval("subMenu") %>' runat="server">
                             <ItemTemplate>
-                                <a href='ProductList.aspx?id={0},<%#Eval("ProductCategoryID") %>'>
+                                <a href='<%#Eval("ProductCategoryID","ProductList.aspx?sid={0}") %>'>
                                     <%# Eval("Title") %>
                                 </a>
                             </ItemTemplate>
@@ -61,11 +61,11 @@
                 <div class="input">
                     <input runat="server" id="input_Search" type="text" placeholder="Tìm kiếm...">
                 </div>
-                <div class="search-icon">
-                    <asp:LinkButton runat="server" id="LinkButton_Search" OnClick="LinkButton_Search_Click">
+                    <asp:Panel class="search-icon" runat="server" DefaultButton="LinkButton_Search">
+                        <asp:LinkButton runat="server" ID="LinkButton_Search" OnClick="LinkButton_Search_Click">
                         <i class="fa fa-search"></i>
                         </asp:LinkButton>
-                </div>
+                    </asp:Panel>
             </div>
         </div>
         <div class="icon-item">
@@ -97,8 +97,7 @@
 <div id="nav">
     <ul class="nav-container">
         <li class="close" onclick="closeNav()">
-            <i class="fa fa-times">
-            </i>
+            <i class="fa fa-times"></i>
         </li>
         <li class="nav-item search-container">
             <input type="text">

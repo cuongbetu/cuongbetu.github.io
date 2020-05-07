@@ -7,3 +7,12 @@ D:\Shop Floda\FlodaStore\obj\Debug\FlodaStore.csprojAssemblyReference.cache
 D:\Shop Floda\FlodaStore\obj\Debug\FlodaStore.csproj.CopyComplete
 D:\Shop Floda\FlodaStore\obj\Debug\FlodaStore.dll
 D:\Shop Floda\FlodaStore\obj\Debug\FlodaStore.pdb
+C:\Users\Admin\Desktop\cuongbetu.github.io\bin\FlodaStore.dll.config
+C:\Users\Admin\Desktop\cuongbetu.github.io\bin\FlodaStore.dll
+C:\Users\Admin\Desktop\cuongbetu.github.io\bin\FlodaStore.pdb
+C:\Users\Admin\Desktop\cuongbetu.github.io\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\cuongbetu.github.io\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\cuongbetu.github.io\obj\Debug\FlodaStore.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\cuongbetu.github.io\obj\Debug\FlodaStore.csproj.CopyComplete
+C:\Users\Admin\Desktop\cuongbetu.github.io\obj\Debug\FlodaStore.dll
+C:\Users\Admin\Desktop\cuongbetu.github.io\obj\Debug\FlodaStore.pdb

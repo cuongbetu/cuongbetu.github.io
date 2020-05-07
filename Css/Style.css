@@ -744,20 +744,38 @@ header {
     width: 14%;
     height: auto;
     text-align: center;
-    margin: 0 auto;
+    margin:20px auto;
     background-color: brown;
     padding: 10px 0;
     cursor: pointer;
 }
 
-    #product-main .see-more-product a {
-        text-decoration: none;
-        text-transform: capitalize;
-        color: cornsilk;
+    #product-main .see-more-product a{
+        text-decoration:none;
+        color:#ebedee;
+        text-transform:capitalize;
     }
 
-@media(max-width: 420px) {
-    #product-main .see-more-product {
+#product .see-more-product {
+    width: 14%;
+    height: auto;
+    text-align: center;
+    margin: 20px auto;
+    background-color: brown;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+    #product .see-more-product a {
+        text-decoration: none;
+        color: #ebedee;
+        text-transform: capitalize;
+    }
+
+
+
+    @media(max-width: 420px) {
+        #product-main .see-more-product {
         width: 40%;
     }
 }
@@ -897,6 +915,7 @@ footer {
     justify-content:space-between;
     width:100%;
     padding:3.3%;
+    margin-top:30px;
     border-top:1px solid silver;
     border-bottom:1px solid silver;
 }
@@ -1668,7 +1687,7 @@ footer {
 
         #product .product-list .product-items {
             margin: 3rem 10px;
-            width: calc(25% - 20px);
+            width: calc(33.33% - 20px);
             box-sizing: border-box;
         }
 
@@ -1697,8 +1716,9 @@ footer {
         #product .product-list .product-infor {
             margin: 0;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction:column;
             justify-content: center;
+            text-align:center;
         }
 
             #product .product-list .product-infor h3 {
@@ -1709,6 +1729,22 @@ footer {
                 color: brown;
                 text-decoration: line-through;
                 margin-right: 15px;
+            }
+
+        #product .see-more-product {
+            width: 14%;
+            height: auto;
+            text-align: center;
+            margin: 20px auto;
+            background-color: brown;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+
+            #product .see-more-product a {
+                text-decoration: none;
+                color: #ebedee;
+                text-transform: capitalize;
             }
 
 /* Responsive cho list sản phẩm */

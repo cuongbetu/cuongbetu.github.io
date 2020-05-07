@@ -57,9 +57,6 @@ namespace FlodaStore
             Load_Best_Seller();
         }
 
-        protected void LinkButton_SeeMore_Click(object sender, EventArgs e)
-        {
-            Load_Data();
-        }
+ 
     }
 }

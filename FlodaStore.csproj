@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppData\ShopBanHoa-1.sql" />
+    <Content Include="Cart.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Masterpage.Master" />
@@ -184,6 +185,13 @@
     <Compile Include="ArticleMainCategory.cs">
       <DependentUpon>ShopBanHoa.tt</DependentUpon>
     </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs">
       <DependentUpon>ShopBanHoa.tt</DependentUpon>
     </Compile>
@@ -286,7 +294,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppCode\" />
-    <Folder Include="Images\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
